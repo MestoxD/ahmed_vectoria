@@ -2306,7 +2306,7 @@ html body .pj-title .kw{padding:.02em .36em;border-radius:7px;border-width:1.5px
 <script>
 document.addEventListener('error',function(e){var t=e.target;
  if(t&&(t.tagName==='IMG'||t.tagName==='VIDEO'||t.tagName==='SOURCE')){
-  (t.tagName==='SOURCE'?t.parentNode:t).classList.add('media-missing');}},true);
+  var el=(t.tagName==='SOURCE'?t.parentNode:t);if(!(el.tagName==='VIDEO'&&el.getAttribute('poster')))el.classList.add('media-missing');}},true);
 </script>
 </head>
 <body data-page="a-propos">
@@ -2402,7 +2402,7 @@ document.addEventListener('error',function(e){var t=e.target;
     </article>
 
     <article class="bx-c bx-2">
-      <div class="ph"><video src="/assets/media/videos/vectoria-animated-logo-v1.mp4" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video></div>
+      <div class="ph"><video src="/assets/media/videos/vectoria-animated-logo-v1.mp4" autoplay muted loop playsinline preload="metadata" aria-hidden="true" poster="/assets/media/images/cloud.jpg"></video></div>
       <div class="in">
         <iconify-icon class="arrow" icon="lucide:arrow-down" width="19"></iconify-icon>
         <div class="cap"><b>Infrastructure maîtrisée</b>Conteneurs, intégration continue et supervision : la production cesse d'être une inconnue.</div>

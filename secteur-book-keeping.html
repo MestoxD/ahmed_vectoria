@@ -2196,7 +2196,7 @@ html body .cx-row:hover{background:color-mix(in srgb,var(--cx-a) 8%,transparent)
 <script>
 document.addEventListener('error',function(e){var t=e.target;
  if(t&&(t.tagName==='IMG'||t.tagName==='VIDEO'||t.tagName==='SOURCE')){
-  (t.tagName==='SOURCE'?t.parentNode:t).classList.add('media-missing');}},true);
+  var el=(t.tagName==='SOURCE'?t.parentNode:t);if(!(el.tagName==='VIDEO'&&el.getAttribute('poster')))el.classList.add('media-missing');}},true);
 </script>
 </head>
 <body data-page="secteurs">
@@ -2228,7 +2228,7 @@ document.addEventListener('error',function(e){var t=e.target;
 <section class="sh" style="--acc:#3ebf24">
   <div class="sh-grid">
     <div class="sh-visual" data-reveal="left">
-      <video src="/assets/media/videos/hero-secteur-book-keeping.mp4" autoplay muted loop playsinline aria-label="Secteur book keeping — Vectoria One"></video>
+      <video src="/assets/media/videos/hero-secteur-book-keeping.mp4" autoplay muted loop playsinline aria-label="Secteur book keeping — Vectoria One" poster="/assets/media/images/7.jpg"></video>
     </div>
     <div class="sh-panel">
       <div class="sh-in">

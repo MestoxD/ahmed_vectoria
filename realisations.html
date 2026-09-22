@@ -1818,7 +1818,7 @@ html body .mega.mega-sm .sm-it small{white-space:normal!important;overflow:visib
 <script>
 document.addEventListener('error',function(e){var t=e.target;
  if(t&&(t.tagName==='IMG'||t.tagName==='VIDEO'||t.tagName==='SOURCE')){
-  (t.tagName==='SOURCE'?t.parentNode:t).classList.add('media-missing');}},true);
+  var el=(t.tagName==='SOURCE'?t.parentNode:t);if(!(el.tagName==='VIDEO'&&el.getAttribute('poster')))el.classList.add('media-missing');}},true);
 </script>
 </head>
 <body data-page="realisations">
@@ -1866,7 +1866,7 @@ document.addEventListener('error',function(e){var t=e.target;
 
 
 <section class="hero hero-page">
-  <div class="hero-media"><video src="/assets/media/videos/success-s.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Nos réalisations"></video><div class="hero-veil"></div></div>
+  <div class="hero-media"><video src="/assets/media/videos/success-s.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Nos réalisations" poster="/assets/img/hero-bg.jpg"></video><div class="hero-veil"></div></div>
   <div class="container hero-inner">
     <nav class="breadcrumb" data-hero-fade><a href="/">Accueil</a><span>/</span><span class="cur">Réalisations</span></nav>
     <span class="eyebrow mb-6" data-hero-fade>Success Stories</span>
